@@ -1,10 +1,11 @@
 .catalog {
   display: grid;
   justify-content: center;
+  grid-template-columns: $width-card;
   gap: 48px;
 
   @media (min-width: 488px) {
-    grid-template-columns: $width-card $width-card;
+    grid-template-columns: repeat(2, $width-card);
   }
 
   @media (min-width: 768px) {
@@ -16,10 +17,9 @@
   }
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    width: 200px;
+    align-content: center;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
